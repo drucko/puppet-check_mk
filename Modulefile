@@ -1,4 +1,4 @@
-name    'check_mk'
+name    'pcfens/check_mk'
 version '0.0.1'
 author 'Phil Fenstermacher <pcfens@wm.edu>'
 license 'Apache License, Version 2.0'
