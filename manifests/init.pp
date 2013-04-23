@@ -24,7 +24,7 @@
 class check_mk (
   $package_url = 'http://mathias-kettner.de/download/check_mk-agent-1.2.0p3-1.noarch.rpm',
   $manage_firewall = False,
-  $port = 6566,
+  $port = 6556,
   $firewall_src = '0.0.0.0/0',
   $allowed_hosts = 'unset',
 ){
@@ -46,7 +46,7 @@ class check_mk (
       }
 
       package { 'check_mk-agent':
-        ensure   => installed,
+        ensure   => latest,
         provider => 'rpm',
         require  => Package['xinetd'],
         source   => $check_mk::package_url,
